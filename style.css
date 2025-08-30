@@ -11,6 +11,10 @@
     font-family: "Lexend", sans-serif;
 }
 
+body {
+    display: block;
+}
+
 
 .floating-wp {
     position: absolute;
@@ -194,14 +198,14 @@ nav a:hover::before {
     /* border: 2px solid red; */
     display: flex;
     animation: slide 11s ease-in-out 0s infinite;
-    animation-direction: normal;
+    animation-direction: alternate-reverse;
     animation-fill-mode: both;
-    transition: 0.2s ease;
+    transition: 0.2s ease-in-out;
 
 
     .img-1 {
         display: block;
-        height: 100%;
+        height: 96%;
         width: 100%;
         position: absolute;
         object-fit: cover;
@@ -263,26 +267,29 @@ nav a:hover::before {
 
 }
 
-@keyframes pop{
+@keyframes pop {
 
-    0%{
+    0% {
         height: 100%;
         z-index: 4;
     }
-    10%{
+
+    10% {
         height: 0%;
-    
+
     }
 
-    90%{
+    90% {
         height: 0%;
-        
+
     }
-    99%{
+
+    99% {
         height: 100%;
         z-index: 4;
     }
-    100%{
+
+    100% {
         height: 100%;
         z-index: 4;
     }
@@ -1388,3 +1395,97 @@ nav a:hover::before {
     color: #ebcec9;
     font-size: 15px;
 }
+
+
+
+
+
+/* ======================================  Responsive starts from here  ============================================================== */
+
+
+@media (max-width:318px) {
+
+    body {
+        display: none;
+    }
+}
+
+
+/* ======================================  Responsive 1440px  ============================================================== */
+
+
+@media (min-width:1130) and (max-width:1440px) {
+
+    .slider {
+        height: 29vh;
+    }
+
+
+    .slide-changer {
+        bottom: 58%;
+    }
+
+    .img-1 {
+        height: 97%;
+    }
+
+    .product {
+        padding-bottom: 10px;
+
+        button {
+            padding: 20px 90px;
+        }
+    }
+
+    .image {
+        height: 72%;
+    }
+
+    .img-2 {
+        left: 99vw;
+    }
+
+    .shark-banner {
+        height: 28vh;
+    }
+
+    .joyfull-banner {
+        height: 45vh;
+    }
+
+    .top {
+        height: 35%;
+    }
+
+    .store {
+        height: 40vh;
+    }
+
+    .connect {
+        height: 40vh;
+    }
+
+    .about {
+        height: 40vh;
+    }
+
+    .policies {
+        height: 40vh;
+    }
+
+    .quick-links {
+        height: 40vh;
+    }
+
+    .newsletter {
+        height: 40vh;
+    }
+
+
+}
+
+
+
+/* ======================================  Responsive 1250px  ============================================================== */
+
+
