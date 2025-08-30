@@ -491,7 +491,9 @@ nav a:hover::before {
     button {
         position: relative;
         overflow: hidden;
-        padding: 19px 97px;
+        text-align: center;
+        width: 90%;
+        height: 60px;
         border-radius: 50px;
         border: 0;
         margin: 10px 15px;
@@ -1431,10 +1433,6 @@ nav a:hover::before {
 
     .product {
         padding-bottom: 10px;
-
-        button {
-            padding: 20px 90px;
-        }
     }
 
     .image {
