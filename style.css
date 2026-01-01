@@ -16,6 +16,12 @@ body {
 }
 
 
+.container {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
 .floating-wp {
     position: absolute;
     position: fixed;
@@ -72,6 +78,7 @@ header {
     width: 100%;
     background-color: black;
     font-family: "Lexend", sans-serif;
+
 }
 
 .fixed {
@@ -112,6 +119,7 @@ label {
 }
 
 .left {
+    display: block;
     width: auto;
     height: auto;
 }
@@ -148,6 +156,7 @@ label {
 }
 
 nav {
+    display: block;
     display: flex;
     height: auto;
     justify-content: center;
@@ -187,15 +196,12 @@ nav a:hover::before {
     display: flex;
     background-color: #D9E0D2;
     overflow: hidden;
-    /* border: 2px solid red; */
-    /* justify-content: center; */
 }
 
 .slider {
     height: 45vh;
     width: 200%;
     position: relative;
-    /* border: 2px solid red; */
     display: flex;
     animation: slide 11s ease-in-out 0s infinite;
     animation-direction: alternate-reverse;
@@ -210,6 +216,26 @@ nav a:hover::before {
         position: absolute;
         object-fit: cover;
     }
+
+    .mobile-image-1 {
+        display: none;
+        height: 96%;
+        width: 100%;
+        position: absolute;
+        object-fit: cover;
+
+    }
+
+    .mobile-image-2 {
+        display: none;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 99vw;
+        object-fit: cover;
+
+    }
+
 
     .img-2 {
         display: block;
@@ -804,6 +830,7 @@ nav a:hover::before {
     width: 100%;
     background-image: url(./assets/joyfull-banner.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 .review-section {
@@ -1413,77 +1440,985 @@ nav a:hover::before {
 }
 
 
-/* ======================================  Responsive 1440px  ============================================================== */
+/* ======================================  Responsive 320px - 375px  ============================================================== */
+
+@media (min-width:319px) and (max-width:375px) {
 
 
-@media (min-width:1130) and (max-width:1440px) {
+    label {
+
+        padding: 15px 10px;
+        font-size: 13px;
+
+    }
+
+    .logo {
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .left {
+        width: 0px;
+        display: none;
+    }
+
+    .middle {
+        img {
+            vertical-align: middle;
+            padding-left: 0px;
+            height: 50px;
+            width: 20px;
+        }
+    }
+
+    .right {
+        gap: 5px;
+        font-size: 17px;
+
+        #search-icon {
+            display: none;
+        }
+    }
+
+
+    nav {
+        display: none;
+    }
+
+
 
     .slider {
-        height: 29vh;
+        height: 61vh;
+
+        .img-1 {
+            display: none;
+        }
+
+        .mobile-image-1 {
+            display: block;
+        }
+
+        .mobile-image-2 {
+            display: block;
+        }
+
+        .img-2 {
+            display: none;
+        }
     }
 
 
     .slide-changer {
-        bottom: 58%;
+        position: absolute;
+        bottom: 15%;
+        left: 12%;
     }
 
-    .img-1 {
-        height: 97%;
+    .changer-1 {
+        height: 3px;
+        width: 50px;
+    }
+
+    .changer-2 {
+        height: 3px;
+        width: 50px;
+    }
+
+    .products {
+        padding: 20px;
+    }
+
+    .products h1 {
+
+        font-size: 25px;
+        font-family: "Bungee", sans-serif;
+        color: #69522e;
+        margin: 48px 0px 24px;
+
+    }
+
+    .grid-container {
+        overflow-x: scroll;
+    }
+
+    .grids {
+        width: 400%;
+        padding: 10px 20px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 460px;
+        gap: 20px;
+        overflow: scroll;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
     }
 
     .product {
-        padding-bottom: 10px;
+
+        .image{
+            height: 63%;
+        }
+
+        button {
+            height: 40px;
+        }
     }
 
-    .image {
-        height: 72%;
+    .homepage-2 {
+        h1 {
+            font-size: 25px;
+        }
     }
 
-    .img-2 {
-        left: 99vw;
+    .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 370px 370px 370px;
+        gap: 30px;
+    }
+
+    .know-more {
+        height: 40vh;
+        padding: 20px;
+
+        h5 {
+            width: 90%;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        button {
+
+            .txt {
+                font-size: 12px;
+                padding: 16px 30px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .grid-container-2 {
+        overflow-x: scroll;
+
+        h1 {
+            font-size: 22px;
+        }
     }
 
     .shark-banner {
-        height: 28vh;
+        height: 60vh;
+        background-image: url(./assets/yash-_-vaishali_Mobile.jpg);
+        background-size: cover;
+        background-position: center;
     }
 
     .joyfull-banner {
-        height: 45vh;
+        height: 17vh;
+    }
+
+    .review-section {
+
+        width: 100%;
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .review-slider {
+        height: auto;
+        width: 300%;
+    }
+
+    .review-box {
+        height: 90%;
+        width: 100%;
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .r {
+        height: 100%;
+        width: 30%;
+        /* border: 2px solid red; */
+        display: flex;
+        flex-direction: column;
     }
 
     .top {
-        height: 35%;
+        height: 50%;
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 15px;
     }
 
-    .store {
-        height: 40vh;
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        /* justify-content: center; */
+        align-items: center;
+        color: #7B7E78;
+        font-size: 15px;
+    }
+
+    .product-review {
+        height: 50px;
+        width: 50px;
+        /* border: 2px solid red; */
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .find-joy {
+
+        h1 {
+            font-size: 25px;
+            width: 70%;
+        }
+
+        h2 {
+            text-align: left;
+            padding-left: 30px;
+            font-size: 25px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+
+    }
+
+    .brand-logo-grid {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0px 0px;
+        gap: 5px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .brand {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #zepto {
+        height: 23px;
+        width: 100px;
+
+    }
+
+    #swiggy {
+        height: 30px;
+        width: 115px;
+    }
+
+    #flipkart {
+        height: 40px;
+        width: 60px;
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+    }
+
+    #amazon {
+        height: 24px;
+        width: 100px;
+        position: relative;
+        left: 0px;
+        top: 3px;
+    }
+
+    #bigbasket {
+        height: 40px;
+        width: 80px;
+        position: relative;
+        left: 0px;
+    }
+
+    .store-slider {
+        display: flex;
+        padding: 10px 30px;
+    }
+
+    .store-grid {
+        display: flex;
+        height: auto;
+        width: fit-content;
+        gap: 20px;
+    }
+
+    .buzz-around {
+
+        padding: 30px;
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .chanels {
+        padding-left: 0px;
+        gap: 0px;
+    }
+
+    #hr {
+        bottom: 50px;
+    }
+
+    #hr2 {
+        bottom: 53px;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .news-logos-1 {
+        /* border: 2px solid red; */
+        height: 10vh;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .news {
+        height: 80px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid red; */
+    }
+
+    .news-logos-2 {
+        margin-right: 0px;
+    }
+
+    .arrow-2 {
+        display: none;
+    }
+
+    .circle-logo {
+        height: 150px;
+
+        img {
+            height: 250px;
+            top: 30px;
+            left: 38px;
+        }
+    }
+
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        padding: 150px 0px 90px 10px;
+
+
+        h5 {
+            font-size: 11px;
+        }
+
+        p {
+            font-size: 14px;
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        a {
+            font-size: 14px;
+        }
+
     }
 
     .connect {
-        height: 40vh;
+        height: auto;
+        width: 100%;
+        padding: 10px 5px;
     }
 
     .about {
-        height: 40vh;
+        height: auto;
+        width: 100%;
     }
 
     .policies {
-        height: 40vh;
+        /* border: 2px solid red; */
+        height: auto;
+        width: 100%;
+        line-height: 1.7rem;
+        padding: 10px 5px;
+        color: #FFFFFF;
+
     }
 
     .quick-links {
-        height: 40vh;
+        /* border: 2px solid red; */
+        height: auto;
+        width: 100%;
+        line-height: 1.7rem;
+        padding: 10px 5px;
+        color: #FFFFFF;
     }
 
     .newsletter {
-        height: 40vh;
+        /* border: 2px solid red; */
+        height: auto;
+        width: 100%;
+        line-height: 2rem;
+        padding: 10px 5px;
+        color: #FFFFFF;
+
+        p {
+            margin-bottom: 10px;
+        }
+
+
     }
 
+    .email {
+        display: flex;
+        width: 90%;
+        /* justify-content: center;  */
+        align-items: center;
+        padding: 5px;
+        padding-right: 20px;
+        border: 0.5px solid #ca7569;
+
+        input {
+            padding: 10px 20px;
+            background: transparent;
+            border: none;
+            color: white;
+            outline: none;
+        }
+
+        i {
+            margin-left: auto;
+        }
+    }
+
+    .email input::placeholder {
+        color: #ebcec9;
+        font-size: 15px;
+    }
 
 }
 
 
+/* ======================================  Responsive 375px - 425px  ============================================================== */
 
-/* ======================================  Responsive 1250px  ============================================================== */
+
+@media (min-width:375px) and (max-width:426px) {
+
+
+    label {
+
+        padding: 15px 10px;
+        font-size: 13px;
+
+    }
+
+    .logo {
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .left {
+        width: 0px;
+        display: none;
+    }
+
+    .middle {
+        img {
+            vertical-align: middle;
+            padding-left: 0px;
+            height: 50px;
+            width: 20px;
+        }
+    }
+
+    .right {
+        gap: 5px;
+        font-size: 17px;
+
+        #search-icon {
+            display: none;
+        }
+    }
+
+
+    nav {
+        display: none;
+    }
+
+
+
+    .slider {
+        height: 79vh;
+
+        .img-1 {
+            display: none;
+        }
+
+        .mobile-image-1 {
+            display: block;
+        }
+
+        .mobile-image-2 {
+            display: block;
+        }
+
+        .img-2 {
+            display: none;
+        }
+    }
+
+
+    .slide-changer {
+        position: absolute;
+        bottom: 0%;
+        left: 18%;
+    }
+
+    .changer-1 {
+        height: 3px;
+        width: 50px;
+    }
+
+    .changer-2 {
+        height: 3px;
+        width: 50px;
+    }
+
+    .products {
+        padding: 20px;
+    }
+
+    .products h1 {
+
+        font-size: 25px;
+        font-family: "Bungee", sans-serif;
+        color: #69522e;
+        margin: 48px 0px 24px;
+
+    }
+
+    .grid-container {
+        overflow-x: scroll;
+    }
+
+    .grids {
+        width: 340%;
+        padding: 10px 20px;
+        grid-template-columns: repeat(4, 300px);
+        grid-template-rows: 570px;
+        gap: 20px;
+        overflow: scroll;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+
+    .product {
+
+        .image{
+            height: 70%;
+        }
+
+        button {
+            height: 50px;
+        }
+    }
+
+    .homepage-2 {
+        h1 {
+            font-size: 25px;
+        }
+    }
+
+    .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 450px 450px 450px;
+        gap: 30px;
+    }
+
+    .know-more {
+        height: 40vh;
+        padding: 20px;
+
+        h5 {
+            width: 90%;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        button {
+
+            .txt {
+                font-size: 12px;
+                padding: 16px 30px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .grid-container-2 {
+        overflow-x: scroll;
+
+        h1 {
+            font-size: 22px;
+        }
+    }
+
+    .shark-banner {
+        height: 70vh;
+        background-image: url(./assets/yash-_-vaishali_Mobile.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .joyfull-banner {
+        height: 20vh;
+    }
+
+    .review-section {
+
+        width: 100%;
+
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .review-slider {
+        height: auto;
+        width: 300%;
+    }
+
+    .review-box {
+        height: 90%;
+        width: 100%;
+        /* border: 2px solid red; */
+        display: flex;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .r {
+        height: 100%;
+        width: 30%;
+        /* border: 2px solid red; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .top {
+        height: 50%;
+        padding-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 15px;
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        /* justify-content: center; */
+        align-items: center;
+        color: #7B7E78;
+        font-size: 15px;
+    }
+
+    .product-review {
+        height: 50px;
+        width: 50px;
+        /* border: 2px solid red; */
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .find-joy {
+
+        h1 {
+            font-size: 25px;
+            width: 70%;
+        }
+
+        h2 {
+            text-align: left;
+            padding-left: 30px;
+            font-size: 25px;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+
+    }
+
+    .brand-logo-grid {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0px 0px;
+        gap: 5px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .brand {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #zepto {
+        height: 27px;
+        width: 100px;
+
+    }
+
+    #swiggy {
+        height: 35px;
+        width: 115px;
+    }
+
+    #flipkart {
+        height: 40px;
+        width: 60px;
+        position: relative;
+        left: 0px;
+        bottom: 0px;
+    }
+
+    #amazon {
+        height: 24px;
+        width: 100px;
+        position: relative;
+        left: 0px;
+        top: 3px;
+    }
+
+    #bigbasket {
+        height: 50px;
+        width: 80px;
+        position: relative;
+        left: 0px;
+    }
+
+    .store-slider {
+        display: flex;
+        padding: 10px 30px;
+    }
+
+    .store-grid {
+        display: flex;
+        height: auto;
+        width: fit-content;
+        gap: 20px;
+    }
+
+    .buzz-around {
+
+        padding: 30px;
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .chanels {
+        padding-left: 0px;
+        gap: 0px;
+    }
+
+    #hr {
+        bottom: 50px;
+    }
+
+    #hr2 {
+        bottom: 53px;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .news-logos-1 {
+        /* border: 2px solid red; */
+        height: 10vh;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .news {
+        height: 80px;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* border: 2px solid red; */
+    }
+
+    .news-logos-2 {
+        margin-right: 0px;
+    }
+
+    .arrow-2 {
+        display: none;
+    }
+
+    .circle-logo {
+        height: 150px;
+
+        img {
+           height: 280px;
+            top: 13px;
+            left: 60px;
+        }
+    }
+
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        padding: 150px 0px 90px 10px;
+
+
+        h5 {
+            font-size: 12px;
+        }
+
+        p {
+            font-size: 15px;
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        a {
+            font-size: 15px;
+        }
+
+    }
+
+    .connect {
+        height: auto;
+        width: 100%;
+        padding: 10px 5px;
+    }
+
+    .about {
+        height: auto;
+        width: 100%;
+    }
+
+    .policies {
+        /* border: 2px solid red; */
+        height: auto;
+        width: 100%;
+        line-height: 1.7rem;
+        padding: 10px 5px;
+        color: #FFFFFF;
+
+    }
+
+    .quick-links {
+        /* border: 2px solid red; */
+        height: auto;
+        width: 100%;
+        line-height: 1.7rem;
+        padding: 10px 5px;
+        color: #FFFFFF;
+    }
+
+    .newsletter {
+        /* border: 2px solid red; */
+        height: auto;
+        width: 100%;
+        line-height: 2rem;
+        padding: 10px 5px;
+        color: #FFFFFF;
+
+        p {
+            margin-bottom: 10px;
+        }
+
+
+    }
+
+    .email {
+        display: flex;
+        width: 90%;
+        /* justify-content: center;  */
+        align-items: center;
+        padding: 5px;
+        padding-right: 20px;
+        border: 0.5px solid #ca7569;
+
+        input {
+            padding: 10px 20px;
+            background: transparent;
+            border: none;
+            color: white;
+            outline: none;
+        }
+
+        i {
+            margin-left: auto;
+        }
+    }
+
+    .email input::placeholder {
+        color: #ebcec9;
+        font-size: 15px;
+    }
+
+}
+
+
+/* ======================================  Responsive 375px - 425px  ============================================================== */
 
 
